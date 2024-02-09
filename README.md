@@ -31,7 +31,7 @@ Use this Script tag as CDN
 
 ```HTML
 <!-- CDN -->
-<script src="https://cdn.jsdelivr.net/gh/user/repo@version/file"></script>
+<script src="https://cdn.jsdelivr.net/gh/abhiib02/BGStretch/BGStretch.js"></script>
 <!-- CDN -->
 <script>
 let Images_Array = [
