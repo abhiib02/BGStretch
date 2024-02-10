@@ -1,7 +1,10 @@
-function BGStretch(Element, Images_Array) {
-
-
+function BGStretch(Element, Images_data_Array) {
+  let Images_Array = Images_data_Array.slice();
+  
+    Images_Array.push(Images_Array[0]);
+  
     document.addEventListener("DOMContentLoaded", function() {
+      
       Images_Array.forEach((image,index)=>{
             var tempImage = new Image();
             tempImage.src = Images_Array[index];
@@ -11,7 +14,7 @@ function BGStretch(Element, Images_Array) {
   let SelectedElement = document.querySelector(Element);
   let kf = document.createElement('style');
   let ks = '';
-  let TotalImages = Images_Array.length;
+  let TotalImages = Images_Array.length ;
   let randomNumber = Math.floor(Math.random()*10000);
   if(SelectedElement.dataset.steps != undefined)
     {
@@ -29,7 +32,7 @@ function BGStretch(Element, Images_Array) {
         infinite`;
     }
     
-  
+    
     Images_Array.forEach((image,index)=>{
       if (index == TotalImages - 1) {
             ks += 
