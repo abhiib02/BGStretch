@@ -16,19 +16,21 @@ function BGStretch(Element, Images_data_Array) {
   let ks = '';
   let TotalImages = Images_Array.length ;
   let randomNumber = Math.floor(Math.random()*10000);
-  if(SelectedElement.dataset.steps != undefined)
+  let Duration = parseInt(SelectedElement.dataset.duration) ?? 5;
+  let Steps = SelectedElement.dataset.steps;
+  if(Steps != undefined)
     {
       SelectedElement.style.animation = 
         `ul_anim_${randomNumber}
-        ${SelectedElement.dataset.duration*TotalImages}s 
-        steps(${SelectedElement.dataset.steps}, end) 
+        ${Duration*TotalImages}s 
+        steps(${Steps}, end) 
         infinite`;
     }
     else
     {
       SelectedElement.style.animation = 
         `ul_anim_${randomNumber} 
-        ${SelectedElement.dataset.duration*TotalImages}s 
+        ${Duration*TotalImages}s 
         infinite`;
     }
     
