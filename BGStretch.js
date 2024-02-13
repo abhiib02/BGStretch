@@ -16,7 +16,7 @@ function BGStretch(Element, Images_data_Array) {
   let ks = '';
   let TotalImages = Images_Array.length ;
   let randomNumber = Math.floor(Math.random()*10000);
-  let Duration = parseInt(SelectedElement.dataset.duration) ?? 5;
+  let Duration = (SelectedElement.dataset.duration == undefined) ? 5 : SelectedElement.dataset.duration;
   let Steps = SelectedElement.dataset.steps;
   if(Steps != undefined)
     {
